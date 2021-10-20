@@ -1,35 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-import axios from 'axios';
+import Home from "./pages/home/home";
+import Login from "./pages/login/login";
+import Profile from "./pages/profile/profile";
+import Register from "./pages/register/register";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+
+//import { useContext } from "react";
+//import { AuthContext } from "./context/AuthContext";
 
 function App() {
-  const getTest = () => {
-    axios.get("http://localhost:8800/api/test").then(
-      res => {
-        console.log(res);
-        alert(res.data.message);
-      }
-    )
-  }
-
+  //const { user } = useContext(AuthContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <button onClick = {getTest}>Get</button>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+          {/* {user ? <Home /> : <Register />} */}
+        </Route>
+        <Route path="/login">
+          <Login />
+          {/* {user ? <Redirect to="/" /> : <Login />} */}
+        </Route>
+        <Route path="/register">
+          <Register />
+          {/* {user ? <Redirect to="/" /> : <Register />} */}
+        </Route>
+        <Route path="/profile/:username">
+          <Profile />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
