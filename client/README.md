@@ -4,9 +4,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the "client" directory, you can run:
+
+#### delete node_modules and package-lock.json ####
+
+### 'npm install'
+### 'npm install @material-ui/core'
+### 'npm install react-router-dom'
 
 ### `npm start`
+
+
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
