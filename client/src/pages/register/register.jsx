@@ -5,9 +5,9 @@ export default function Register() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">MataHub</h3>
+          <h3 className="loginLogo">MataHub by the MataPirates</h3>
           <span className="loginDesc">
-            Connect with friends and the world around you on MataHub.
+            Created for CSUN personnels to connect with friends, alumni, classmates, and faculty on MataHub.
           </span>
         </div>
         <div className="loginRight">

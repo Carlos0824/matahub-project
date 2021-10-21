@@ -3,10 +3,7 @@
     "",
     "\\client",
     "\\client\\src",
-    "\\server",
-    "\\server\\models",
-    "\\server\\routes"
+    "\\client\\src\\components"
   ],
-  "SelectedNode": "\\server\\routes\\post.js",
   "PreviewInSolutionExplorer": false
 }
